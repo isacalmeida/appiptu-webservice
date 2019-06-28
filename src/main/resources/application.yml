@@ -3,7 +3,7 @@ logging:
   file: spring-logs/appiptu.log
 
 spring:
-  # Datasource
+  # Datasource List
   datasource:
     continue-on-error: true
     driver-class-name: org.postgresql.Driver
@@ -12,10 +12,11 @@ spring:
     platform: postgres
     url: jdbc:postgresql://dbdesk.ci347vo4wg5v.us-east-2.rds.amazonaws.com:5432/appiptu
     username: appiptu
+    
   # Domain Identification
   jmx:
     default-domain: appiptu
-  # JPA
+  # JPA List
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
     generate-ddl: true
