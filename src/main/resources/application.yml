@@ -3,20 +3,24 @@ logging:
   file: spring-logs/appiptu.log
 
 spring:
-  # Datasource List
+
+  # Datasource Properties
   datasource:
     continue-on-error: true
+    #data: classpath:/data.sql
     driver-class-name: org.postgresql.Driver
     initialization-mode: always
     password: appiptu
     platform: postgres
+    #schema: classpath:/schema.sql
     url: jdbc:postgresql://dbdesk.ci347vo4wg5v.us-east-2.rds.amazonaws.com:5432/appiptu
     username: appiptu
-    
+
   # Domain Identification
   jmx:
     default-domain: appiptu
-  # JPA List
+
+  # JPA Properties
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
     generate-ddl: true
@@ -28,11 +32,13 @@ spring:
         temp:
           use_jdbc_metadata_defaults: false
     show-sql: true
+
   # Path for Views MVC
   mvc:
     view:
       prefix: /WEB-INF/view/
       suffix: .jsp
+
   # Ansi Output for Console
   output:
     ansi:
